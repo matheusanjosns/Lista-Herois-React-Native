@@ -2,4 +2,4 @@
 Aplicação Lista de Heróis em React Native.
 
 
-Consumindo APi rest criada manualmente com descrições dos heróis.
+Consumindo APi com descrições dos heróis.
