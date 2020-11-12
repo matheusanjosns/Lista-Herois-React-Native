@@ -3,14 +3,14 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import {toUpperFirst} from '../util'
  
 const PeopleListItem = props => {
-    const {people, onPressItemDetails} = props
-    const {id, nome} = people
+    const {hero, onPressItemDetails} = props
+    const {id, nome} = hero
     return (
         <TouchableOpacity onPress={() => {
-            onPressItemDetails(people)
+            onPressItemDetails(hero)
         }}>
         <View style={style.line}>
-        <Image style={style.avatar} source={{uri: people.imagem}}/>
+        <Image style={style.avatar} source={{uri: hero.imagem}}/>
             <Text style={style.linetext} key={id}>
                 {`${
                     toUpperFirst(nome)
@@ -38,6 +38,7 @@ const style = StyleSheet.create({
     avatar:{        
         aspectRatio: 1,
         flex: 1,
+        bottom:5,        
         marginLeft: 10,
         borderRadius: 50,
     }

@@ -7,7 +7,7 @@ export default class PeoplePage extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      peoples: []
+      hero: []
     }
   }
  
@@ -17,7 +17,7 @@ export default class PeoplePage extends React.Component{
     .then(response => {
       const results = response.data
       this.setState({
-        peoples: results
+        hero: results
       })
     })
   }
@@ -25,14 +25,13 @@ export default class PeoplePage extends React.Component{
   render(){
     return (
       <View>
-        <PeoppleList peoples={this.state.peoples} 
-                     onPressItem={ (people) => {
+        <PeoppleList hero={this.state.hero} 
+                     onPressItem={ (hero) => {
                          this.props.navigation.navigate('Descrição dos Heróis',
-                         {"people": people})
+                         {"hero": hero})
                      }}
         />
       </View>
     );
   }
- 
 }
